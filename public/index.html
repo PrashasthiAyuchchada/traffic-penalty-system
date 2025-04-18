@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Traffic Violation Form</title>
+  <!-- Include Bootstrap CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Traffic Violation Form</h1>
+    <form action="/api/violations" method="POST">
+      
+      <div class="form-group">
+        <label for="violatorName">Violator Name:</label>
+        <input type="text" class="form-control" id="violatorName" name="violatorName" required>
+      </div>
+
+      <div class="form-group">
+        <label for="violatorMobileNumber">Violator Mobile Number:</label>
+        <input type="text" class="form-control" id="violatorMobileNumber" name="violatorMobileNumber" placeholder="Enter mobile number with country code" required>
+      </div>
+      
+      <div class="form-group">
+        <label for="vehicleNumber">Vehicle Number:</label>
+        <input type="text" class="form-control" id="vehicleNumber" name="vehicleNumber" required>
+      </div>
+      
+      <div class="form-group">
+        <label for="violationType">Violation Type:</label>
+        <select class="form-control" id="violationType" name="violationType" required>
+          <option value="overspeeding">Overspeeding</option>
+          <option value="noSeatbelt">No Seatbelt</option>
+          <option value="noHelmet">No Helmet</option>
+        </select>
+      </div>
+
+      
+      <div class="form-group">
+        <label for="violationDate">Violation Date:</label>
+        <input type="date" class="form-control" id="violationDate" name="violationDate" required>
+      </div>
+      
+     <div class="form-group">
+       <label for="violationTime">Violation Time:</label>
+       <input type="time" class="form-control" id="violationTime" name="violationTime" required>
+      </div>   
+
+      <div class="form-group">
+        <label for="violationLocation">Violation Location:</label>
+        <input type="text" class="form-control" id="violationLocation" name="violationLocation" required>
+      </div>
+      
+      <div class="form-group">
+        <label for="fineAmount">Fine Amount:</label>
+        <input type="number" class="form-control" id="fineAmount" name="fineAmount" required>
+      </div>
+      
+      <button type="submit" class="btn btn-primary">Submit Violation</button>
+      
+    </form>
+  </div>
+
+
+
+<!-- Include Bootstrap JS and jQuery -->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+ 
+</body>
+</html>
